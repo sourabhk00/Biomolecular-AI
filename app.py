@@ -69,7 +69,7 @@ class BiomolecularApp:
             
             mode = st.selectbox(
                 "Select Analysis Mode",
-                ["Protein Analysis", "Drug Design", "AI Laboratory", "Federated Learning", "Model Training", "Batch Processing"],
+                ["Protein Analysis", "Drug Design", "AI Laboratory", "Federated Learning", "Database", "Model Training", "Batch Processing"],
                 key="analysis_mode"
             )
             
@@ -111,6 +111,8 @@ class BiomolecularApp:
             self.render_ai_laboratory()
         elif mode == "Federated Learning":
             self.render_federated_learning()
+        elif mode == "Database":
+            self.render_database()
         elif mode == "Model Training":
             self.render_model_training()
         elif mode == "Batch Processing":
@@ -147,6 +149,12 @@ class BiomolecularApp:
         from components.federated_lab import FederatedLabComponent
         federated_lab = FederatedLabComponent()
         federated_lab.render()
+    
+    def render_database(self):
+        """Render database interface"""
+        from components.database_interface import DatabaseInterfaceComponent
+        database_interface = DatabaseInterfaceComponent()
+        database_interface.render()
     
     def render_model_training(self):
         """Render model training interface"""

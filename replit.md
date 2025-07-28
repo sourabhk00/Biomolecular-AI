@@ -109,14 +109,22 @@ The application follows a modular component-based architecture:
    - AutoML optimization with neural architecture search
    - Privacy-preserving training with differential privacy and secure aggregation
 
+7. **Database Interface** (`components/database_interface.py`)
+   - Comprehensive PostgreSQL database management
+   - Data exploration, analytics dashboard, and search capabilities
+   - Import/export functionality with data integrity checks
+   - Real-time monitoring and maintenance tools
+
 ## Data Flow
 
 1. **Input Processing**: Users input protein sequences through multiple interfaces (manual, file upload, examples)
 2. **Validation**: Sequences are validated using `MolecularProcessor` with comprehensive error checking
-3. **Embedding Generation**: Valid sequences are processed through ESM-2 model to generate protein embeddings
-4. **Analysis/Prediction**: Embeddings are fed into hybrid predictor for property prediction or drug design
-5. **Visualization**: Results are displayed using interactive Plotly visualizations
-6. **State Management**: All results and configurations are maintained in Streamlit session state
+3. **Database Storage**: All data is automatically stored in PostgreSQL database with proper schemas
+4. **Embedding Generation**: Valid sequences are processed through ESM-2 model to generate protein embeddings
+5. **Analysis/Prediction**: Embeddings are fed into hybrid predictor for property prediction or drug design
+6. **Results Storage**: Analysis results, model performance, and experimental data are persisted in database
+7. **Visualization**: Results are displayed using interactive Plotly visualizations with database-backed analytics
+8. **State Management**: All results, configurations, and experimental history maintained across sessions
 
 ## External Dependencies
 
