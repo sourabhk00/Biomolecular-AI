@@ -41,6 +41,32 @@ The application follows a modular component-based architecture:
    - Property-specific prediction heads for binding affinity, solubility, toxicity, stability, and bioavailability
    - Configurable hidden dimensions (default 256) with dropout regularization
 
+3. **BiomolecularLLM** (`models/bio_llm.py`)
+   - Large language model specialized for biomolecular sequence generation and analysis
+   - Transformer architecture with 12 layers, 8 attention heads, 512 embedding dimensions
+   - Supports protein sequence generation, property prediction, and attention visualization
+   - Includes amino acid vocabulary with special tokens for sequence processing
+
+4. **DiffusionMolecularGenerator** (`models/bio_llm.py`)
+   - Diffusion model for novel molecular structure generation
+   - 1000-step denoising process with configurable feature dimensions
+   - Generates 3D molecular coordinates for drug discovery applications
+
+5. **ProteinFoldingPredictor** (`models/bio_llm.py`)
+   - Deep neural network for protein structure prediction
+   - Predicts secondary structure, dihedral angles, and contact maps
+   - Multi-head architecture for comprehensive structural analysis
+
+6. **QuantumMolecularOracle** (`models/bio_llm.py`)
+   - Quantum-inspired molecular property predictor
+   - Simulates quantum computation for enhanced molecular analysis
+   - 8-qubit quantum state processing with classical preprocessing
+
+7. **FederatedBiomolecularModel** (`models/federated_learning.py`)
+   - Federated learning framework for multi-institutional collaboration
+   - Differential privacy integration for secure model updates
+   - Secure aggregation protocols for privacy-preserving training
+
 ### Utility Classes
 1. **MolecularProcessor** (`utils/molecular_utils.py`)
    - Validates protein and DNA sequences with comprehensive error checking
@@ -53,20 +79,35 @@ The application follows a modular component-based architecture:
    - Interactive charts for sequence composition analysis
 
 ### User Interface Components
-1. **Protein Analysis Interface**
+1. **Protein Analysis Interface** (`components/protein_analyzer.py`)
    - Multiple input methods: manual entry, file upload, example sequences
    - Real-time sequence validation with detailed error messages
    - Interactive analysis results display
 
-2. **Drug Design Interface**
+2. **Drug Design Interface** (`components/drug_designer.py`)
    - Target protein parameter configuration
    - Binding site specification capabilities
    - Design workflow management
 
-3. **Training Pipeline Interface**
+3. **Training Pipeline Interface** (`components/training_pipeline.py`)
    - Configurable training parameters
    - Real-time training monitoring
    - Training history visualization
+
+4. **AI Laboratory Interface** (`components/ai_lab.py`)
+   - Advanced AI model integration hub
+   - Biomolecular LLM, diffusion models, structure prediction, and quantum computing
+   - Multi-model pipeline execution with real-time visualization
+
+5. **External LLM Integration** (`components/llm_integration.py`)
+   - OpenAI and Anthropic API integration for advanced analysis
+   - Protein analysis, drug discovery insights, literature mining, and hypothesis generation
+   - Support for GPT-4o and Claude Sonnet 4.0 models
+
+6. **Federated Learning Interface** (`components/federated_lab.py`)
+   - Multi-institutional collaboration platform
+   - AutoML optimization with neural architecture search
+   - Privacy-preserving training with differential privacy and secure aggregation
 
 ## Data Flow
 

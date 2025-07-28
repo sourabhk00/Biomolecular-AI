@@ -17,6 +17,7 @@ from utils.visualization import MolecularVisualizer
 from components.protein_analyzer import ProteinAnalyzerComponent
 from components.drug_designer import DrugDesignerComponent
 from components.training_pipeline import TrainingPipelineComponent
+from components.ai_lab import AILabComponent
 
 # Page configuration
 st.set_page_config(
@@ -68,7 +69,7 @@ class BiomolecularApp:
             
             mode = st.selectbox(
                 "Select Analysis Mode",
-                ["Protein Analysis", "Drug Design", "Model Training", "Batch Processing"],
+                ["Protein Analysis", "Drug Design", "AI Laboratory", "Federated Learning", "Model Training", "Batch Processing"],
                 key="analysis_mode"
             )
             
@@ -106,6 +107,10 @@ class BiomolecularApp:
             self.render_protein_analysis()
         elif mode == "Drug Design":
             self.render_drug_design()
+        elif mode == "AI Laboratory":
+            self.render_ai_laboratory()
+        elif mode == "Federated Learning":
+            self.render_federated_learning()
         elif mode == "Model Training":
             self.render_model_training()
         elif mode == "Batch Processing":
@@ -131,6 +136,17 @@ class BiomolecularApp:
             self.visualizer
         )
         designer_component.render()
+    
+    def render_ai_laboratory(self):
+        """Render AI laboratory interface"""
+        ai_lab = AILabComponent()
+        ai_lab.render()
+    
+    def render_federated_learning(self):
+        """Render federated learning interface"""
+        from components.federated_lab import FederatedLabComponent
+        federated_lab = FederatedLabComponent()
+        federated_lab.render()
     
     def render_model_training(self):
         """Render model training interface"""
