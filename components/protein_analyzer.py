@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, Optional
 
+
 class ProteinAnalyzerComponent:
     """Streamlit component for protein sequence analysis"""
     
