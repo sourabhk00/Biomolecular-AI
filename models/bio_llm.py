@@ -7,6 +7,7 @@ from typing import Dict, List, Optional, Tuple
 import os
 import json
 
+
 class BiomolecularLLM(nn.Module):
     """Large Language Model for biomolecular sequence generation and analysis"""
     
