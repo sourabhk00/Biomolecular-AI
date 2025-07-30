@@ -1,7 +1,0 @@
-Enable database integration for storing and analyzing biomolecular data
-
-Integrates PostgreSQL database with SQLAlchemy ORM for data persistence and management with new `DatabaseInterfaceComponent` and database schema.
-
-Replit-Commit-Author: Agent
-Replit-Commit-Session-Id: f3f1d6d0-316b-4a7a-a0ac-64d35c0732d1
-Replit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/f91681d4-9370-4fa9-b82d-5e9f49b15b6e/f3f1d6d0-316b-4a7a-a0ac-64d35c0732d1/d0Ei0VV
