@@ -7,6 +7,7 @@ import json
 import os
 from datetime import datetime
 
+
 class FederatedBiomolecularModel(nn.Module):
     """Federated learning framework for biomolecular models"""
     
