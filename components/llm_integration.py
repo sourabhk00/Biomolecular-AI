@@ -5,6 +5,7 @@ from typing import Dict, List, Optional
 import pandas as pd
 import plotly.graph_objects as go
 
+
 class LLMIntegrationComponent:
     """Integration with external LLM APIs for advanced biomolecular analysis"""
     
