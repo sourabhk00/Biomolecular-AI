@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 from typing import Dict, List, Optional
 import os
 
+
 class TrainingPipelineComponent:
     """Streamlit component for model training pipeline"""
     
