@@ -9,6 +9,7 @@ import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
+
 class DatabaseInterfaceComponent:
     """Comprehensive database interface for biomolecular platform"""
     
