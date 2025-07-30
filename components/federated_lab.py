@@ -8,6 +8,7 @@ from typing import Dict, List, Optional
 import json
 from datetime import datetime, timedelta
 
+
 class FederatedLabComponent:
     """Advanced federated learning and AutoML interface"""
     
