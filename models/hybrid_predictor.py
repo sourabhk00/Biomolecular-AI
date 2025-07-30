@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import numpy as np
 import streamlit as st
 
+
 class HybridAffinityPredictor(nn.Module):
     """Hybrid Transformer-GNN model for molecular property prediction"""
     
