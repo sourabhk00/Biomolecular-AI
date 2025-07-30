@@ -5,6 +5,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime
 import json
 
+
 # Database connection
 DATABASE_URL = os.getenv('DATABASE_URL')
 engine = create_engine(DATABASE_URL)
