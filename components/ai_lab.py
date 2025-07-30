@@ -7,9 +7,10 @@ import plotly.express as px
 from typing import Dict, List, Optional
 import os
 
+
 class AILabComponent:
     """Advanced AI Laboratory for biomolecular modeling and generation"""
-    
+
     def __init__(self):
         self.initialize_models()
     
