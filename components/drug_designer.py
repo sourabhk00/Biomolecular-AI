@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Optional
 
+
 class DrugDesignerComponent:
     """Streamlit component for AI-powered drug design"""
     
